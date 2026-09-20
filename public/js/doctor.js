@@ -146,6 +146,8 @@ function renderSessionView(caseUuid, data) {
     <div class="chat-box">${messagesHtml || '<div class="empty-note">No conversation recorded.</div>'}</div>
 
     <div id="quest-area"></div>
+
+    <div class="breadcrumb" onclick="window.location.hash='#/cases/${encodeURIComponent(caseUuid)}'"><b>Done - go back to sessions</b></span></div>
   `;
 
   mountQuestionnaires(session.id, answers, feedbackUnlocked, aiReview, sessionMeta);
